@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IFT — MDVR Evolution + Building Management Market</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f8f7f3; color: #1a1a18; padding: 2rem; max-width: 920px; margin: 0 auto; line-height: 1.75; }
+h1 { font-size: 18px; font-weight: 600; margin-bottom: 4px; }
+.meta { font-size: 12px; color: #888; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e0ded8; }
+.tabs { display: flex; gap: 8px; margin-bottom: 1.5rem; flex-wrap: wrap; }
+.tab { padding: 7px 16px; border-radius: 8px; border: 0.5px solid #ccc; background: #fff; color: #666; font-size: 13px; cursor: pointer; }
+.tab.active { background: #185FA5; color: #e6f1fb; border-color: #185FA5; }
+.sec { display: none; }
+.sec.active { display: block; }
+.card { background: #fff; border: 0.5px solid #e0ded8; border-radius: 12px; padding: 1rem 1.25rem; margin-bottom: 1rem; }
+.card-title { font-size: 14px; font-weight: 600; margin-bottom: 8px; color: #1a1a18; }
+.card-sub { font-size: 12px; color: #666; line-height: 1.65; margin-bottom: 10px; }
+.row { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 7px; padding: 8px 11px; border-radius: 8px; background: #f1efe8; }
+.row.green { background: #eaf3de; }
+.row.blue { background: #e6f1fb; }
+.row.amber { background: #faeeda; }
+.row.red { background: #fcebeb; }
+.row.purple { background: #eeedfe; }
+.dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; margin-top: 5px; }
+.row-text { font-size: 12px; line-height: 1.6; color: #1a1a18; }
+.row-sub { font-size: 11px; color: #666; margin-top: 2px; line-height: 1.5; }
+.badge { display: inline-block; font-size: 11px; padding: 3px 10px; border-radius: 6px; margin: 0 4px 5px 0; }
+.b-blue { background: #e6f1fb; color: #0c447c; }
+.b-green { background: #eaf3de; color: #27500a; }
+.b-amber { background: #faeeda; color: #633806; }
+.b-red { background: #fcebeb; color: #a32d2d; }
+.b-gray { background: #f1efe8; color: #444441; }
+.b-purple { background: #eeedfe; color: #3c3489; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
+.divider { border: none; border-top: 0.5px solid #e0ded8; margin: 1.25rem 0; }
+.section-label { font-size: 11px; font-weight: 600; color: #888; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 8px; }
+.highlight { background: #f1efe8; border-radius: 10px; padding: 1rem 1.25rem; margin-top: 1rem; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; margin: 0.5rem 0 1rem; }
+th { text-align: left; padding: 7px 10px; color: #666; font-weight: 500; border-bottom: 0.5px solid #e0ded8; background: #f8f7f3; }
+td { padding: 7px 10px; border-bottom: 0.5px solid #f1efe8; vertical-align: top; line-height: 1.6; }
+tr:last-child td { border-bottom: none; }
+.ok { color: #27500a; font-weight: 500; }
+.warn { color: #a32d2d; font-weight: 500; }
+.caution { color: #633806; font-weight: 500; }
+.arrow-block { display: flex; align-items: center; gap: 8px; margin: 12px 0; }
+.arrow-node { background: #fff; border: 0.5px solid #e0ded8; border-radius: 8px; padding: 8px 14px; font-size: 12px; font-weight: 500; flex: 1; text-align: center; }
+.arrow-sep { font-size: 16px; color: #aaa; flex-shrink: 0; }
+@media (max-width: 620px) { .grid2 { grid-template-columns: 1fr; } .arrow-block { flex-direction: column; } }
+</style>
+</head>
+<body>
+
+<h1>IFT Platform — MDVR Evolution + Building Management Market</h1>
+<div class="meta">Internal reference · MD office · April 2026 · Working document</div>
+
+<div class="tabs">
+  <button class="tab active" onclick="show('mdvr',this)">MDVR Evolution</button>
+  <button class="tab" onclick="show('hw',this)">HW Policy</button>
+  <button class="tab" onclick="show('building',this)">Building / Hotel Market</button>
+  <button class="tab" onclick="show('opportunity',this)">Opportunity Map</button>
+</div>
+
+<!-- ═══ MDVR EVOLUTION ═══ -->
+<div id="sec-mdvr" class="sec active">
+
+  <div class="card">
+    <div class="card-title">From "camera + GPS tracker" → "Fleet Intelligence Platform"</div>
+    <div class="arrow-block">
+      <div class="arrow-node" style="border-color:#e0ded8;color:#888">Legacy MDVR<br><span style="font-size:11px;font-weight:400">recording device + basic GPS</span></div>
+      <div class="arrow-sep">→</div>
+      <div class="arrow-node" style="border-color:#185FA5;color:#185FA5">Current IFT MDVR<br><span style="font-size:11px;font-weight:400">HOWEN HW + FMS platform</span></div>
+      <div class="arrow-sep">→</div>
+      <div class="arrow-node" style="border-color:#639922;color:#27500a">InfoTrack X Fleet<br><span style="font-size:11px;font-weight:400">AI-integrated intelligence layer</span></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Evolution axis — what IFT can build on top of existing HW</div>
+    <div class="section-label">Driver & health management</div>
+    <div class="row blue"><div class="dot" style="background:#185FA5"></div>
+      <div class="row-text">Driver fatigue and health state monitoring via cabin camera AI analysis
+        <div class="row-sub">Drowsiness detection, distraction alerts, continuous scoring — real-time push to fleet manager</div>
+      </div>
+    </div>
+
+    <div class="section-label" style="margin-top:10px">Fuel integrity — evidence-grade</div>
+    <div class="row green"><div class="dot" style="background:#639922"></div>
+      <div class="row-text">Fuel sensor accuracy improvement + tamper evidence chain
+        <div class="row-sub">Sensor calibration protocol, cross-validation with GPS stop data and engine-on/off logs</div>
+      </div>
+    </div>
+    <div class="row green"><div class="dot" style="background:#639922"></div>
+      <div class="row-text">Petrol station CCTV correlation for skimming/diversion detection
+        <div class="row-sub">Side camera or 360° camera footage timestamped against fuel fill event — dispute-proof evidence record</div>
+      </div>
+    </div>
+
+    <div class="section-label" style="margin-top:10px">AI video intelligence</div>
+    <div class="row purple"><div class="dot" style="background:#7F77DD"></div>
+      <div class="row-text">Backend AI image enhancement — low-bitrate footage upscaled for incident review
+        <div class="row-sub">Especially valuable for night incidents and low-quality HOWEN streams</div>
+      </div>
+    </div>
+    <div class="row purple"><div class="dot" style="background:#7F77DD"></div>
+      <div class="row-text">OCR accuracy improvement for licence plate and cargo label reading
+        <div class="row-sub">AI-corrected reads from moving vehicle footage, cross-referenced with known plate database</div>
+      </div>
+    </div>
+
+    <div class="section-label" style="margin-top:10px">Navigation & route intelligence</div>
+    <div class="row amber"><div class="dot" style="background:#BA7517"></div>
+      <div class="row-text">Google Maps API integration — live two-way sync between driver app and fleet manager dashboard
+        <div class="row-sub">ETA accuracy, real-time rerouting alerts, driver-facing navigation with manager override capability</div>
+      </div>
+    </div>
+    <div class="row amber"><div class="dot" style="background:#BA7517"></div>
+      <div class="row-text">Route Deviation evaluation — AI-based, not rule-based
+        <div class="row-sub">Instead of fixed geofence breach, AI learns normal route variance and flags statistically anomalous deviations. Reduces false positives, catches subtle diversion patterns.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="border-color:#639922">
+    <div class="card-title" style="color:#27500a">IFT positioning — what this becomes in one sentence</div>
+    <div style="font-size:13px;font-style:italic;color:#27500a;line-height:1.8;padding:8px 0">
+      "We do not sell cameras. We sell accountability — for drivers, for fuel, for routes, for cargo — backed by evidence that holds up when something goes wrong."
+    </div>
+    <div style="font-size:12px;color:#666;margin-top:6px">This is the language that wins fleet operators, insurance companies, and logistics companies. It is also the language Samsara uses globally — but IFT can own the India-specific, India-priced version of it.</div>
+  </div>
+
+</div>
+
+<!-- ═══ HW POLICY ═══ -->
+<div id="sec-hw" class="sec">
+
+  <div class="card">
+    <div class="card-title">IFT Hardware relationship policy — clarified</div>
+    <div class="card-sub">IFT is a platform and integration company, not a hardware manufacturer. HW decisions are governed by quality accountability, not price alone.</div>
+
+    <table>
+      <thead><tr><th>Vendor</th><th>Relationship</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>HOWEN</strong></td>
+          <td class="ok">Primary HW supplier — continue</td>
+          <td>Current baseline. Quality acceptable. Relationship established.</td>
+        </tr>
+        <tr>
+          <td><strong>Teltonika</strong></td>
+          <td class="ok">HW supplier — not competitor</td>
+          <td>Provides device hardware. IFT's platform sits above it. No conflict.</td>
+        </tr>
+        <tr>
+          <td><strong>Concox</strong></td>
+          <td class="warn">IFT will not supply or recommend</td>
+          <td>Quality is below IFT's reliability standard. IFT cannot put its name on it.</td>
+        </tr>
+        <tr>
+          <td><strong>Samsara</strong></td>
+          <td class="warn">True competitor — full-stack</td>
+          <td>End-to-end integrated platform. IFT's differentiation must be India-specific depth and price point.</td>
+        </tr>
+        <tr>
+          <td><strong>Streamax</strong></td>
+          <td><span class="caution">High-end HW — selective use</span></td>
+          <td>Premium pricing limits addressable market. Not default, but available for specific high-value clients.</td>
+        </tr>
+        <tr>
+          <td><strong>Intuigine (USA)</strong></td>
+          <td><span class="caution">Requires investigation</span></td>
+          <td>Possibly full-stack telematics competitor. Confirm scope before positioning.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+    <div class="section-label">Concox exception policy — new IFT motto</div>
+    <div class="row blue"><div class="dot" style="background:#185FA5"></div>
+      <div class="row-text"><strong>If a client has already purchased Concox hardware independently:</strong>
+        <div class="row-sub">IFT will support FMS subscription service on that hardware — under strict conditions:<br>
+        • Full API disclosure required from Concox<br>
+        • Full Protocol Documentation required<br>
+        • RCA on all faults conducted to maximum depth by IFT<br>
+        • IFT makes clear to the client that hardware quality is the client's responsibility; IFT owns the software/service quality layer</div>
+      </div>
+    </div>
+    <div class="row green"><div class="dot" style="background:#639922"></div>
+      <div class="row-text"><strong>What this communicates to the market:</strong>
+        <div class="row-sub">"We do not supply unreliable hardware. But if you are already locked into it, we are the team that will still give you the most honest, deepest analysis of what is failing and why. That is our standard — regardless of whose hardware is underneath."</div>
+      </div>
+    </div>
+    <div class="highlight">
+      <div class="section-label" style="margin-bottom:6px">IFT Service Quality Motto (draft)</div>
+      <div style="font-size:13px;font-style:italic;line-height:1.8">"We only supply hardware we trust. For everything else, we supply the truth."</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══ BUILDING MARKET ═══ -->
+<div id="sec-building" class="sec">
+
+  <div class="card">
+    <div class="card-title">India building / apartment security market — what the data shows</div>
+
+    <div class="section-label">Market structure — who controls what today</div>
+
+    <div class="row"><div class="dot" style="background:#888"></div>
+      <div class="row-text"><strong>Large gated communities (premium, 500+ units)</strong>
+        <div class="row-sub">MyGate or NoBrokerHood as the society management app (visitor management, billing, complaints). CCTV is Hikvision or Dahua hardware, managed separately. Security guards provided by private security companies (G4S, SIS, Securitas). These three layers — app, CCTV, guards — are typically NOT integrated. Each is a separate vendor contract.</div>
+      </div>
+    </div>
+    <div class="row"><div class="dot" style="background:#888"></div>
+      <div class="row-text"><strong>Mid-size apartments (100–500 units) — IFT's target zone</strong>
+        <div class="row-sub">Manual entry registers + basic CCTV (often Hikvision standalone, no VMS). May or may not use a society app. Security is often a single guard with a logbook. Integration is essentially zero. This is the fragmented, unserved middle.</div>
+      </div>
+    </div>
+    <div class="row red"><div class="dot" style="background:#e24b4a"></div>
+      <div class="row-text"><strong>Small buildings / older complexes</strong>
+        <div class="row-sub">CCTV recorder (DVR), no cloud, no app, no integration. Footage reviewed only after an incident. Watchman is the primary security layer. This segment cannot afford integrated solutions.</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="section-label">Key insight — the integration gap</div>
+    <div class="row green"><div class="dot" style="background:#639922"></div>
+      <div class="row-text">MyGate (the market leader) explicitly supports CCTV, LPR, biometric, and boom barrier integration via API
+        <div class="row-sub">But this integration is hardware-agnostic — they provide the software layer, not the physical integration work. The actual camera-to-cloud connection, protocol handling, and reliability of the feed is left to whoever installed the CCTV system. That gap is where IFT's communication + platform depth is relevant.</div>
+      </div>
+    </div>
+    <div class="row amber"><div class="dot" style="background:#BA7517"></div>
+      <div class="row-text">NoBrokerHood has faced reliability complaints and a reported data breach (2025)
+        <div class="row-sub">The user reviews show: login failures, delayed notifications, zero accountability from support. There is a credibility gap in the market for a provider that actually owns the quality of the integrated experience end-to-end.</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="section-label">Hotels — PMS layer vs. physical security layer</div>
+    <div class="row blue"><div class="dot" style="background:#185FA5"></div>
+      <div class="row-text">Hotel PMS (Oracle, Hotelogix, IDS Next) handles reservations, billing, housekeeping — not physical security
+        <div class="row-sub">The physical layer — CCTV, access control, energy management — is a separate system. In mid-scale hotels (3–4 star, independent), these two layers almost never talk to each other. The hotel manager switches between two screens.</div>
+      </div>
+    </div>
+    <div class="row blue"><div class="dot" style="background:#185FA5"></div>
+      <div class="row-text">IDS Next is Bangalore-based, 30+ years, strong in Indian regulatory compliance (GST etc.)
+        <div class="row-sub">Potential conversation partner. If KTS can sit alongside or integrate with IDS Next as the physical layer, IFT's integration capability becomes the bridge between PMS software and physical infrastructure.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══ OPPORTUNITY MAP ═══ -->
+<div id="sec-opportunity" class="sec">
+
+  <div class="card">
+    <div class="card-title">Where IFT can actually enter — honest assessment</div>
+
+    <table>
+      <thead><tr><th>Segment</th><th>Current state</th><th>IFT entry angle</th><th>Verdict</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Fleet / logistics</strong><br><span style="font-size:11px;color:#666">MDVR core</span></td>
+          <td>Fragmented. Samsara at top, many local players below.</td>
+          <td>AI intelligence layer on HOWEN HW. Fuel evidence. Driver health. India-priced.</td>
+          <td class="ok">Primary. Own this first.</td>
+        </tr>
+        <tr>
+          <td><strong>Mid-scale hotel</strong><br><span style="font-size:11px;color:#666">via KTS</span></td>
+          <td>PMS (Hotelogix/IDS Next) and physical security totally disconnected.</td>
+          <td>KTS provides PMS relationship. IFT bridges physical CCTV/access to cloud management. Requires KTS to have real India insight.</td>
+          <td class="caution">Conditional. Validate KTS first.</td>
+        </tr>
+        <tr>
+          <td><strong>Mid-size apartment complex</strong><br><span style="font-size:11px;color:#666">new territory</span></td>
+          <td>MyGate/NoBrokerHood at app layer. CCTV unintegrated. No one owns end-to-end.</td>
+          <td>IFT as the physical-to-digital integration layer. Comms + CCTV + access control unified on one reliable platform. Positioned against NoBrokerHood's quality failures.</td>
+          <td class="caution">Medium-term. Requires Sales hire + KTS or equivalent partner.</td>
+        </tr>
+        <tr>
+          <td><strong>AGV / Drone</strong></td>
+          <td>Make in India 60% constraint. Subscription culture mismatch.</td>
+          <td>Only viable via large government/defence partner. Cannot do independently.</td>
+          <td class="warn">Defer or exit.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+    <div class="section-label">The common thread across all valid opportunities</div>
+    <div class="highlight">
+      <p style="font-size:13px;line-height:1.8">Every viable IFT opportunity shares one structural characteristic: <strong>there is a gap between a physical layer (device, camera, sensor) and a management/intelligence layer (dashboard, alert, evidence record)</strong> — and no one currently owns that gap reliably in the India mid-market.<br><br>
+      IFT's entire value proposition — from Shaik's RCA capability to the C/C++ Comms rebuild to the fuel evidence chain — is about owning that gap with a quality standard the market has not seen from an India-based team.<br><br>
+      That is InfoTrack X.</p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function show(name, btn) {
+  document.querySelectorAll('.sec').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('sec-' + name).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>
